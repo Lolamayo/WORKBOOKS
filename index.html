@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOLA MAYO_INTERACTIVE MEDIA WORKBOOK</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script>
+            function showContent(date, weather) {
+              var x = document.getElementById("content-"+date);
+              if (x.style.display === "none") {
+                x.style.display = "block";
+              } else {
+                x.style.display = "none";
+              }
+              changeBg(weather);
+            }
+
+            function changeBg(weather) {
+              document.getElementsByTagName('body')[0].style.backgroundImage = 'url("./IMAGES/' + weather + '.jpg")';
+            }
+
+            function play(audio) {
+              var audio = document.getElementById("audio");
+              audio.play();
+            }
+
+            // let contentDivs = document.getElementsByClassName("content");
+            // for(let i = 0; i < contentDivs.length; i++) {
+            //   dragElement(contentDivs[i]);
+            // }
+
+            function dragElement(elmnt) {
+              var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+              if (document.getElementById(elmnt.id + "header")) {
+                // if present, the header is where you move the DIV from:
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+              } else {
+                // otherwise, move the DIV from anywhere inside the DIV:
+                elmnt.onmousedown = dragMouseDown;
+              }
+            
+
+            function dragMouseDown(e) {
+              e = e || window.event;
+              e.preventDefault();
+              // get the mouse cursor position at startup:
+              pos3 = e.clientX;
+              pos4 = e.clientY;
+              document.onmouseup = closeDragElement;
+              // call a function whenever the cursor moves:
+              document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+              e = e || window.event;
+              e.preventDefault();
+              // calculate the new cursor position:
+              pos1 = pos3 - e.clientX;
+              pos2 = pos4 - e.clientY;
+              pos3 = e.clientX;
+              pos4 = e.clientY;
+              // set the element's new position:
+              elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+              elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+              // stop moving when mouse button is released:
+              document.onmouseup = null;
+              document.onmousemove = null;
+            }
+          }
+          
+          dragElement(document.getElementById("content-0203"))
+
+
+        </script>
+    </head>
+
+    <body>
+        <div href="#" class="img bg"></div>
+
+        <h1 class="lola_WORKBOOK_heading">2A: Web Design Workbook</h1>
+        <br>
+        <div class="header">  
+            <table>
+                <tr>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                  <th>Sunday</th>
+                </tr>
+                <tr>
+                  <td>
+                    <a onclick="changeBg('cold'); play.audio();" class="cold-btn">26 February
+                      <audio id="audio" src="./AUDIO/Crickets.m4a"></audio> 
+                      <!-- <audio id="audio" src="./AUDIO/Awkwardcrickets.mp3"></audio> -->
+                    </a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">27</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">28</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">29</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">1 January</a>
+                  </td>
+                  <td>
+                    <a onclick="showContent('0203', 'cold')" class="cold-btn">2</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('cold')" class="cold-btn">3</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a onclick="changeBg('cold')" class="cold-btn">4</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">5</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('rain')" class="rainbtn">6</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('cold')" class="cold-btn">7</a>
+                  </td>
+                  <td>
+                    <a onclick="showContent('0803', 'hot')" class="hot-btn">8</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">9</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">10</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td> 
+                    <a onclick="showContent('1103', 'hot')" class="hot-btn">11</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('cold')" class="cold-btn">12</a>
+                  </td>
+                  <td>
+                    <a onclick="showContent('1303', 'rain')" class="rainbtn">13</a>
+                  </td>
+                  <td>
+                    <a onclick="showContent('1403', 'cold')" class="cold-btn">14</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">15</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">16</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">17</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn" >18</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" onclick="showContent('1903', 'rain')" class="rainbtn">19 Project 2A due</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('rain')" class="rainbtn">20</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">21</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">22</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">23</a>
+                  </td>
+                  <td>
+                    <a onclick="changeBg('hot')" class="hot-btn">24</a>
+                  </td>
+                </tr>
+              </table>
+        </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2>↓</h2> 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<p> Click twice on any day + scroll down to see what I was working on! Click that day again to get rid of the content. 
+  <br>
+  <br>
+  <br>
+The days I did nothing are supposed to make an 'awkward silence' cricket noise when you click but they do not :(
+  <br>
+  <br>
+  <br>
+  <br>
+<strong>TIP:</strong> The top of Ava's <strong>left ear</strong> is the actual cursor.
+
+</p>
+
+        <div id="content-0203" class="content" class="drag">
+        <section class="column">
+        <div><p>02/03: This week I observed interfaces in 
+                <a href="https://www.imdb.com/title/tt0181689/">Minority Report</a>
+            ... and in Real Life</p>
+            <br>
+        </div>
+        <div>
+        <section class="row">
+            <div>
+                <figure>
+                    <img src="./IMAGES/Minority Report SS1.png" alt="Tom Cruise using Precrime System" width="300" height="auto">
+                    <figcaption> Cruise using Precrime System</figcaption>
+                    </figure>
+                <br>
+                <figure>
+                    <img src="./IMAGES/Minority Report SS2.png" alt="Pre-cognitive people" width="300" height="auto">
+                    <figcaption>Pre-cognitive people</figcaption>
+                    </figure>                
+            </div>
+            <div>
+                <figure>
+                    <img src="./IMAGES/Interface example_angkor wat.jpg" alt="Ancient technology at Angkor Wat: the sun illuminates Buddha at sunrise" width="150" height="auto">
+                    <figcaption>Ancient technology at Angkor Wat: 
+                        <br>
+                        the sun illuminates Buddha at sunrise
+                    </figure>
+                <br>
+            </div>
+            <div>
+                <figure>
+                    <img src="./IMAGES/Interface example_horn.jpg" alt="Makeshift horn" width="150" height="auto">
+                    <figcaption>Makeshift horn</figcaption>
+                    </figure>
+            </div>
+        </section>
+        </section>
+        </div>
+<br>  
+        <div id="content-0803" class="content">
+            <section class="column">
+            <div><p>08/03: Human gestures which trigger human-non-human interactivity (or should)</p>
+            </div>
+            <div>
+            <section class="row">
+                <div>
+                    <figure>
+                        <img src="./IMAGES/zap watch 1.jpg" alt="" width="150" height="auto">
+                        <img src="./IMAGES/zap watch 3.jpg" alt="" width="150" height="auto">
+                       <figcaption>The watch monitors the wearer's focus. If their mind wanders it zaps them and offers a single quiz question to refocus them.</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="./IMAGES/MELATONIN 1.jpg" alt="" width="150" height="auto">
+                        <img src="./IMAGES/MELATONIN 2.jpg" alt="" width="150" height="auto">
+                        <figcaption>Bedroom light turns off when you read 10 pages. The light off releases melatonin. </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="./IMAGES/alarm clock 1.jpg" alt="" width="150" height="auto">
+                        <img src="./IMAGES/alarm clock 2.jpg" alt="" width="150" height="auto">
+                        <figcaption>The alarm clock can only be turned off by getting up and doing 5 starjumps.</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="./IMAGES/breathaliser 1.jpg" alt="" width="150" height="auto">
+                        <img src="./IMAGES/breathaliser 2.jpg" alt="" width="150" height="auto">
+                        <figcaption>The cyclist needs to breathe into the interlocker to prove sobriety and unlock the lock. </figcaption>
+                    </figure>
+                </div>
+                </section>
+                </div>
+                </section>
+                </div>
+                </section>
+            <br>   
+
+        <div id="content-1103" class="content">
+            <section class="column">
+            <div><p>11/02: Wireframe + Sketches</p>
+              <br>
+              <br>
+            <p>I experimented with website layout by workshopping features, organisation and hierarchy through sketches. I chose a calendar navigation header to convey a <strong>personal, rudimentary,</strong> yet <strong>cohesive</strong> feel. The calendar provided a chronological hierarchy which organised the chaos in my own head.</p>
+            <br>
+            </div>
+            <div>
+            <figure>
+              <img src="./IMAGES/wireframe sketch/sketch 1.jpg" alt="" width="300" height="auto">
+            </figure>
+            <figure>
+              <img src="./IMAGES/wireframe sketch/sketch 2.jpg" alt="" width="300" height="auto">
+            </figure>
+            <figure>
+              <img src="./IMAGES/wireframe sketch/sketch 3.jpg" alt="" width="300" height="auto">
+            </figure>
+            <figure>
+              <img src="./IMAGES/wireframe sketch/sketch 4.jpg" alt="" width="300" height="auto">
+            </figure>
+            </div>
+            </section>
+          </div>
+
+        <div id="content-1303" class="content">
+            <section class="column"> 
+                <div>
+                    <figure>
+                    <img src="./IMAGES/Ava cursor 2.png" alt="" width="400" height="auto">
+                    <figcaption>The PNG must be saved as a perfect square. File -> export -> save for web (legacy) -> change dimensions (45px) -> save </figcaption>
+                    </figure>
+                </div>
+                </section>
+            </div>  
+
+          <div id="content-1403" class="content">
+              <section class="column"> 
+              <div><p>14/03: Asking Questions + Workshopping Problems in class</p>
+                <br>
+              </div>
+              <div>
+                  <figure>
+                  <img src="./IMAGES/Milanote questions ss.PNG" alt="" width="600" height="auto">
+                   </figure>
+              </div>
+              </section>
+          </div>
+    
+    </body>
+</html>
