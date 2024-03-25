@@ -20,10 +20,10 @@
             function changeBg(weather) {
               document.getElementsByTagName('body')[0].style.backgroundImage = 'url("./IMAGES/' + weather + '.jpg")';
             }
-
-            function play(audio) {
-              var audio = document.getElementById("audio");
-              audio.play();
+      
+            function crickets() {
+              const sound = new Audio("./AUDIO/Crickets.m4a");
+              sound.play();
             }
 
             // let contentDivs = document.getElementsByClassName("content");
@@ -97,51 +97,51 @@
                 </tr>
                 <tr>
                   <td>
-                    <a onclick="changeBg('cold'); play.audio();" class="cold-btn">26 February
-                      <audio id="audio" src="./AUDIO/Crickets.m4a"></audio> 
-                      <!-- <audio id="audio" src="./AUDIO/Awkwardcrickets.mp3"></audio> -->
+                    <a onclick="changeBg('cold'); crickets();" class="cold-btn">26 February
                     </a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">27</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">27
+                    </a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">28</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">28
+                    </a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">29</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">29</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">1 January</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">1 January</a>
                   </td>
                   <td>
                     <a onclick="showContent('0203', 'cold')" class="cold-btn">2</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('cold')" class="cold-btn">3</a>
+                    <a onclick="changeBg('cold'); crickets();" class="cold-btn">3</a>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <a onclick="changeBg('cold')" class="cold-btn">4</a>
+                    <a onclick="changeBg('cold'); crickets();" class="cold-btn">4</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">5</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">5</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('rain')" class="rainbtn">6</a>
+                    <a onclick="changeBg('rain'); crickets();" class="rainbtn">6</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('cold')" class="cold-btn">7</a>
+                    <a onclick="changeBg('cold'); crickets();" class="cold-btn">7</a>
                   </td>
                   <td>
                     <a onclick="showContent('0803', 'hot')" class="hot-btn">8</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">9</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">9</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">10</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">10</a>
                   </td>
                 </tr>
                 <tr>
@@ -149,7 +149,7 @@
                     <a onclick="showContent('1103', 'hot')" class="hot-btn">11</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('cold')" class="cold-btn">12</a>
+                    <a onclick="changeBg('cold'); crickets();" class="cold-btn">12</a>
                   </td>
                   <td>
                     <a onclick="showContent('1303', 'rain')" class="rainbtn">13</a>
@@ -158,36 +158,36 @@
                     <a onclick="showContent('1403', 'cold')" class="cold-btn">14</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">15</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">15</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">16</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">16</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">17</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">17</a>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn" >18</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn" >18</a>
                   </td>
                   <td>
                     <a onclick="changeBg('hot')" onclick="showContent('1903', 'rain')" class="rainbtn">19 Project 2A due</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('rain')" class="rainbtn">20</a>
+                    <a onclick="changeBg('rain'); crickets();" class="rainbtn">20</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">21</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">21</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">22</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">22</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">23</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">23</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" class="hot-btn">24</a>
+                    <a onclick="changeBg('hot'); crickets();" class="hot-btn">24</a>
                   </td>
                 </tr>
               </table>
@@ -208,10 +208,6 @@
   <br>
   <br>
 <p> Click twice on any day + scroll down to see what I was working on! Click that day again to get rid of the content. 
-  <br>
-  <br>
-  <br>
-The days I did nothing are supposed to make an 'awkward silence' cricket noise when you click but they do not :(
   <br>
   <br>
   <br>
