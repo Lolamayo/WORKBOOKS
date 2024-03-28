@@ -97,8 +97,9 @@ th {
     color: black;
     font-weight: bold;
     font-size: 10px;
+    border-style: solid;
     border-color: black;
-    border-width: 50px;
+    border-width: 5px;
 }
 
 
