@@ -5,7 +5,6 @@
         <link href="style.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
 <script>
             function showContent(date, weather) {
               var x = document.getElementById("content-"+date);
@@ -16,71 +15,38 @@
               }
               changeBg(weather);
             }
-
             function changeBg(weather) {
               document.getElementsByTagName('body')[0].style.backgroundImage = 'url("./IMAGES/' + weather + '.jpg")';
             }
-      
             function crickets() {
               const sound = new Audio("./AUDIO/Crickets.m4a");
               sound.play();
             }
-
-            // let contentDivs = document.getElementsByClassName("content");
-            // for(let i = 0; i < contentDivs.length; i++) {
-            //   dragElement(contentDivs[i]);
-            // }
-
-            function dragElement(elmnt) {
-              var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-              if (document.getElementById(elmnt.id + "header")) {
-                // if present, the header is where you move the DIV from:
-                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-              } else {
-                // otherwise, move the DIV from anywhere inside the DIV:
-                elmnt.onmousedown = dragMouseDown;
-              }
-            
-
-            function dragMouseDown(e) {
-              e = e || window.event;
-              e.preventDefault();
-              // get the mouse cursor position at startup:
-              pos3 = e.clientX;
-              pos4 = e.clientY;
-              document.onmouseup = closeDragElement;
-              // call a function whenever the cursor moves:
-              document.onmousemove = elementDrag;
+            function openNav() {
+            document.getElementById("mySidebar").style.width = "200px";
+            document.getElementById("main").style.marginLeft = "200px";
             }
-
-            function elementDrag(e) {
-              e = e || window.event;
-              e.preventDefault();
-              // calculate the new cursor position:
-              pos1 = pos3 - e.clientX;
-              pos2 = pos4 - e.clientY;
-              pos3 = e.clientX;
-              pos4 = e.clientY;
-              // set the element's new position:
-              elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-              elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
             }
-
-            function closeDragElement() {
-              // stop moving when mouse button is released:
-              document.onmouseup = null;
-              document.onmousemove = null;
-            }
-          }
-          
-          dragElement(document.getElementById("content-0203"))
-
-
-        </script>
+</script>
     </head>
 
     <body>
         <div href="#" class="img bg"></div>
+        
+        <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="index.html">Workbook 2A</a>
+          <a href="index2.html">Workbook 2B</a>
+          <a href="#">Workbook 2C</a>
+          <a href="#">Research Journal</a>
+          <a href="./2a-content.html">Show all 2A Content</a>
+      </div>
+       <div id="main">
+          <button class="openbtn" onclick="openNav()">☰</button> 
+      </div>
 
         <h1 class="lola_WORKBOOK_heading">2A: Web Design Workbook</h1>
         <br>
@@ -172,7 +138,7 @@
                     <a onclick="changeBg('hot'); crickets();" class="hot-btn" >18</a>
                   </td>
                   <td>
-                    <a onclick="changeBg('hot')" onclick="showContent('1903', 'rain')" class="rainbtn">19 Project 2A due</a>
+                    <a onclick="changeBg('rain')" onclick="showContent('1903', 'rain')" class="rainbtn">19 Project 2A due</a>
                   </td>
                   <td>
                     <a onclick="changeBg('rain'); crickets();" class="rainbtn">20</a>
@@ -192,7 +158,7 @@
                 </tr>
               </table>
         </div>
-  <br>
+         <br>
   <br>
   <br>
   <br>
@@ -202,18 +168,7 @@
   <br>
   <h2>↓</h2> 
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-<p> Click twice on any day + scroll down to see what I was working on! Click that day again to get rid of the content. 
-  <br>
-  <br>
-  <br>
-  <br>
 <strong>TIP:</strong> The top of Ava's <strong>left ear</strong> is the actual cursor.
-
 </p>
 
         <div id="content-0203" class="content" class="drag">
@@ -229,12 +184,12 @@
                 <figure>
                     <img src="./IMAGES/Minority Report SS1.png" alt="Tom Cruise using Precrime System" width="300" height="auto">
                     <figcaption> Cruise using Precrime System</figcaption>
-                    </figure>
+                </figure>
                 <br>
                 <figure>
                     <img src="./IMAGES/Minority Report SS2.png" alt="Pre-cognitive people" width="300" height="auto">
                     <figcaption>Pre-cognitive people</figcaption>
-                    </figure>                
+                </figure>                
             </div>
             <div>
                 <figure>

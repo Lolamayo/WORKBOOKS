@@ -1,10 +1,8 @@
 body {
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: 'Courier New', Courier, monospace;
     color: mediumblue;
     text-align: center; 
     background-color: honeydew;
-
-    /* background-image: url("images/cloudysky.jpg"); */
     background-size: 100% auto;
 }
 * {
@@ -14,10 +12,58 @@ body {
     border:none;
 }
 .lola_WORKBOOK_heading {
-    font-style: italic;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 35px;
 }
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px; */
+  }
+  .sidebar a {
+    padding: 8px 8px 8px 32px; */
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+    font-size: 15px;
+    color: white;
+    display: block;
+    text-align: left;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  .sidebar a:hover {
+    color: #444;
+  }
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+  }
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    z-index: 1;
+    top: 25px;
+    right: 25px;
+  }
+  .openbtn:hover {
+    background-color: #444;
+  }
 .header {
     position: sticky;
     top: 0px;
@@ -70,10 +116,8 @@ th {
     text-decoration: none;
     display: inline-block;
     font-size: 11px;
-
     width: 13.1vw;
 }
-
 .cold-btn:hover {
     cursor: url("IMAGES/Ava-cursor-cold.png"), auto;
 }
@@ -86,10 +130,9 @@ th {
 .cold-btn:hover {
     background-image: url("IMAGES/cloudysky.jpg"), auto;
 }
-
 .content {
     position: absolute;
-    /* z-index: 9999; */
+    z-index: 9999;
     display: flex;
     cursor: move;
     border-radius: 25px;
@@ -101,8 +144,6 @@ th {
     border-color: black;
     border-width: 5px;
 }
-
-
 #content-0203 {
 width: 60%;
 height: 320px;
@@ -141,7 +182,7 @@ font-family: 'Courier New', Courier, monospace;
     background-color: none;
     margin-top: 10px;
     font-family: 'Courier New', Courier, monospace; 
-    }
+}
 #content-1403 {
 width: 650px;
 height: 350px;
