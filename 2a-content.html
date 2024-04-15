@@ -4,15 +4,59 @@
     <title>LOLA MAYO_INTERACTIVE MEDIA WORKBOOK</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h3{
+            font-size: 12pt;
+        }
+        .square {
+            background-color: yellow;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 80%;
+            margin-left: 10%;
+            font-size: 9pt;
+        }
+        figcaption {
+            width: 200px;
+        }
+    </style>
+    <script>
+            function openNav() {
+            document.getElementById("mySidebar").style.width = "200px";
+            document.getElementById("main").style.marginLeft = "200px";
+            }
+            function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            }
+    </script>
 </head>
 
 <body>
     <div href="#" class="img bg"></div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="https://lolamayo.github.io/WORKBOOKS/">Workbook 2A</a>
+        <a href="https://lolamayo.github.io/WORKBOOK2/">Workbook 2B</a>
+        <a href="#">Workbook 2C</a>
+        <a href="./2a-content.html">Show all 2A Content</a>
+    </div>
+     <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button> 
+    </div>
 
 
-    <div><p>02/03: This week I observed interfaces in 
+    <div id="title">
+        <br><br><br>
+        <h1>See <strong>All Content</strong> from Workbook 2A</h1>
+        <br><br>
+    </div>
+
+    <div class="square">
+    <div>
+        <h3>02/03: This week I observed interfaces in
             <a href="https://www.imdb.com/title/tt0181689/">Minority Report</a>
-        ... and in Real Life</p>
+        ... and in Real Life</h3> 
         <br>
     </div>
     <div>
@@ -20,7 +64,7 @@
         <div>
             <figure>
                 <img src="./IMAGES/Minority Report SS1.png" alt="Tom Cruise using Precrime System" width="300" height="auto">
-                <figcaption> Cruise using Precrime System</figcaption>
+                <figcaption width="100px"> Cruise using Precrime System</figcaption>
             </figure>
             <br>
             <figure>
@@ -31,9 +75,7 @@
         <div>
             <figure>
                 <img src="./IMAGES/Interface example_angkor wat.jpg" alt="Ancient technology at Angkor Wat: the sun illuminates Buddha at sunrise" width="150" height="auto">
-                <figcaption>Ancient technology at Angkor Wat: 
-                    <br>
-                    the sun illuminates Buddha at sunrise
+                <figcaption>Ancient technology at Angkor Wat: the sun illuminates Buddha at sunrise
                 </figure>
             <br>
         </div>
@@ -44,15 +86,20 @@
                 </figure>
         </div>
     </section>
+    </div>
+
     </section>
     </div>
 <br>  
-    <!-- <div id="content-0803" class="content"> -->
+    <div class="square">
         <section class="column">
-        <div><p>08/03: Human gestures which trigger human-non-human interactivity (or should)</p>
+        <div>
+            <h3>08/03: Human gestures which trigger human-non-human interactivity (or should)</h3>
         </div>
         <div>
         <section class="row">
+        <section class="column">
+        </section>
             <div>
                 <figure>
                     <img src="./IMAGES/zap watch 1.jpg" alt="" width="150" height="auto">
@@ -86,55 +133,73 @@
             </section>
             </div>
             </section>
+            </div>
         <br>   
 
-    <!-- <div id="content-1103" class="content"> -->
-        <section class="column">
-        <div><p>11/02: Wireframe + Sketches</p>
-          <br>
-          <br>
-        <p>I experimented with website layout by workshopping features, organisation and hierarchy through sketches. I chose a calendar navigation header to convey a <strong>personal, rudimentary,</strong> yet <strong>cohesive</strong> feel. The calendar provided a chronological hierarchy which organised the chaos in my own head.</p>
+        <div class="square">   
+            <section class="column">
+            <div><h3>11/02: Wireframe + Sketches</h3>
+            </div>
+              <br>
+              <br>
+            <div>
+                <p>I experimented with website layout by workshopping features, organisation and hierarchy through sketches. I chose a calendar navigation header to convey a <strong>personal, rudimentary,</strong> yet <strong>cohesive</strong> feel. The calendar provided a chronological hierarchy which organised the chaos in my own head.</p>
+                <br>
+            </div>
+            <section class="row">
+            <div>
+                <figure>
+                <img src="./IMAGES/wireframe sketch/sketch 1.jpg" alt="" width="450" height="auto">
+                </figure>
+                <figure>
+                <img src="./IMAGES/wireframe sketch/sketch 2.jpg" alt="" width="450" height="auto">
+                </figure>
+            </div>
+            <div>
+                <figure>
+                <img src="./IMAGES/wireframe sketch/sketch 3.jpg" alt="" width="450" height="auto">
+                </figure>
+                <figure>
+                <img src="./IMAGES/wireframe sketch/sketch 4.jpg" alt="" width="450" height="auto">
+                </figure>
+            </div>
+            </section>
+          </div>
+        </div>
+        <br>
+
+    <div class="square">
+        <section class="column"> 
+            <div><h3>
+                13/03: AVA CURSOR
+            </h3>
+            </div>
+            <div>
+                <figure>
+                <img src="./IMAGES/Ava cursor 2.png" alt="" width="800" height="auto">
+                <p>
+                    The PNG must be saved as a perfect square. File -> export -> save for web (legacy) -> change dimensions (45px) -> save 
+                </p>
+                </figure>
+            </div>
+        </section>
+    </div>
+    <br>
+ 
+
+      <div class="square">
+\       <section class="column"> 
+        <div><h3>
+            14/03: Asking Questions + Workshopping Problems in class</p>
+        </h3>
         <br>
         </div>
         <div>
         <figure>
-          <img src="./IMAGES/wireframe sketch/sketch 1.jpg" alt="" width="300" height="auto">
-        </figure>
-        <figure>
-          <img src="./IMAGES/wireframe sketch/sketch 2.jpg" alt="" width="300" height="auto">
-        </figure>
-        <figure>
-          <img src="./IMAGES/wireframe sketch/sketch 3.jpg" alt="" width="300" height="auto">
-        </figure>
-        <figure>
-          <img src="./IMAGES/wireframe sketch/sketch 4.jpg" alt="" width="300" height="auto">
-        </figure>
+        <img src="./IMAGES/Milanote questions ss.PNG" alt="" width="800" height="auto">
+         </figure>
         </div>
-        </section>
-      </div>
-
-    <!-- <div id="content-1303" class="content"> -->
-        <section class="column"> 
-            <div>
-                <figure>
-                <img src="./IMAGES/Ava cursor 2.png" alt="" width="400" height="auto">
-                <figcaption>The PNG must be saved as a perfect square. File -> export -> save for web (legacy) -> change dimensions (45px) -> save </figcaption>
-                </figure>
-            </div>
-            </section>
-        </div>  
-
-      <!-- <div id="content-1403" class="content"> -->
-          <section class="column"> 
-          <div><p>14/03: Asking Questions + Workshopping Problems in class</p>
-            <br>
-          </div>
-          <div>
-              <figure>
-              <img src="./IMAGES/Milanote questions ss.PNG" alt="" width="600" height="auto">
-               </figure>
-          </div>
-          </section>
+        </section> 
       </div>
 
 </body>
